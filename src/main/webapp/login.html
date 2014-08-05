@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Support Gateway - Login Template</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="bower/acs-common-web/app/css/master.css?v3.8" type="text/css"/>
+  <!--  /CSS -->
+
+  <!--  Meta Tags -->
+  <meta name="description" content="Advanced Support Gateway - Login Demo Layout Boilerplate File">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="target-densitydpi=device-dpi"/>
+  <!--/Meta Tags -->
+
+  <!-- Icons Tags -->
+  <link rel="shortcut icon" href="http://www.oracle.com/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="./imgages/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./imgages/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" href="./imgages/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-startup-image" href="./imgages/splash-startup.png">
+  <!-- /Icons Tags -->
+
+  <!-- iOS6 -->
+  <meta name="apple-mobile-web-app-title" content="Advanced Support Gateway">
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='apple-touch-fullscreen' content='yes'>
+  <!-- /iOS6 -->
+
+  <!-- requirejs bootstrap code -->
+  <script data-main="js/login-main" src="bower/acs-common-web/app/js/lib/require/require.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <section class="gateway-login signin-main">
+    <div class="section-content">
+      <div class="wrap">
+        <div class="container">
+          <div class="form-wrap">
+            <div class="row" data-bind="fadeVisible: currentFunction() == 'LOGIN'" style="display:none">
+              <div id="gateway-login-form" class="drop-shadow-pane">
+                <div class="form-header"><a href="./" title="Advanced Support Gateway Login"><img
+                    src="images/oracle-logo.png" alt="Advanced Support Gateway Login"/></a>
+                  <h4>Advanced Support Gateway Login</h4>
+                </div>
+                <div class="form-main">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" required
+                             data-bind="value: credential.userId, hasFocus: true" placeholder="Username"/>
+                      <input type="password" class="form-control" data-bind="value: credential.password"
+                             placeholder="Password" autocomplete="off"/>
+                    </div>
+                    <button data-bind="click: login" class="btn btn-block signin">Login</button>
+
+                  </form>
+                </div>
+                <!--./form-main -->
+                <div class="form-footer">
+                  <div class="row">
+                    <div class="col-md-12 pull-left"><a href="#" id="forgot_from_1" data-bind="click: forgotPassword"><i
+                        class="fa fa-unlock-alt"></i> Forgot Password?</a></div>
+                  </div>
+                </div>
+                <!--./form-footer -->
+              </div>
+              <!--./drop-shadow-pane -->
+            </div>
+            <!--./row -->
+
+            <div class="row" data-bind="fadeVisible: currentFunction() == 'FORGOT'" style="display:none">
+              <div id="gateway-pwd-form" class="drop-shadow-pane">
+                <div class="form-header"><a href="./" title="Forgot My Password"><img src="images/oracle-logo.png"
+                                                                                      alt="Advanced Support Gateway Login"/></a>
+                  <h4>Recovery Your Password</h4>
+                </div>
+                <div class="form-main">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" required
+                             data-bind="value: email, valueUpdate: 'afterkeydown', hasFocus: true"
+                             placeholder="Please enter your registered email address"/>
+                    </div>
+                    <button data-bind="click: initiateResetPassword, enable: enableSendButton"
+                            class="btn btn-block signin">Recover My Account Details
+                    </button>
+                    <h5>A reset-password email will be sent to the registered email address entered above. Please
+                      contact your TAM if you are experiencing any other issues with your login details.</h5>
+
+                  </form>
+                </div>
+                <!--./form-main -->
+                <div class="form-footer">
+                  <div class="row">
+                    <div class="col-md-12 pull-left"><a href="#" data-bind="click: backToLogin"><i
+                        class="fa fa-undo"></i> Return to Login Screen</a></div>
+                  </div>
+                </div>
+              </div>
+              <!--./drop-shadow-pane -->
+            </div>
+            <!--./row -->
+
+            <div class="row" data-bind="fadeVisible: currentFunction() == 'RESETPWD'" style="display:none">
+              <div class="drop-shadow-pane">
+                <div class="form-header"><a href="./" title="Forgot My Password"><img src="images/oracle-logo.png"
+                                                                                      alt="Advanced Support Gateway Login"/></a>
+                  <h4 data-bind="text: type == 'a' ? 'Active Your Account' : 'Reset Password'"></h4>
+                </div>
+                <div class="form-main">
+                  <form>
+                    <h5 data-bind="visible: type == 'a'">Please activate your account <span
+                        data-bind="text: credential.userId"></span> by entering a password</h5>
+                    <h5 data-bind="visible: type == 'v'">Enter a new password for user <span
+                        data-bind="text: credential.userId"></span></h5>
+
+                    <div class="form-group">
+                      <input type="password" class="form-control" required data-bind="value: password, hasFocus: true"
+                             placeholder="New Password" autocomplete="off"/>
+                      <input type="password" class="form-control" data-bind="value: confirmPassword"
+                             placeholder="Confirm Password" autocomplete="off"/>
+                    </div>
+                    <button data-bind="click: changePassword, visible: type == 'v'" class="btn btn-block signin">Change
+                      Password
+                    </button>
+                    <button data-bind="click: activateUser, visible: type == 'a'" class="btn btn-block signin">
+                      Activate
+                    </button>
+                  </form>
+                </div>
+                <!--./form-main -->
+                <div class="form-footer">
+                  <div class="row">
+                    <div class="col-md-12 pull-left"><a href="#" data-bind="click: backToLogin"><i
+                        class="fa fa-arrow-left"></i> Back to login</a></div>
+                  </div>
+                </div>
+              </div>
+              <!--./drop-shadow-pane -->
+            </div>
+            <!--./row -->
+
+            <div id="loading" data-bind="visible: loading"
+                 style="display: block;height: 24px;margin-top:20px;margin-left:120px"><img src="images/preloader.gif">
+            </div>
+
+
+          </div>
+          <!-- /.form-wrap -->
+
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.section-content -->
+  </section>
+  <!-- /.gateway-login -->
+</div>
+<!-- /.container -->
+
+</body>
+</html>

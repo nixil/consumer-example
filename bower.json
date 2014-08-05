@@ -1,0 +1,23 @@
+{
+  "name": "consumer-example",
+  "version": "0.1.0",
+  "authors": [
+    "nixl <tomorrow009@163.com>"
+  ],
+  "description": "Sample project use common-web",
+  "main": "src/main/webapp/index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "acs-common-web": "https://github.com/nixil/common-web.git"
+  }
+}

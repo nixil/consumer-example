@@ -1,0 +1,122 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1><span><a href="#/lifecycle/serviceDashboard">Platform Provisioning Service - Test Demo</a> </span></h1>
+
+
+    </div>
+    <!-- /.col-lg-12 -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel-body"> 
+                <!-- Nav tabs -->
+                <ul id="consoltab" class="nav nav-tabs">
+                    <li class="active"><a href="#targets" data-toggle="tab" data-bind='click: forceResize' ><i class="fa fa-cogs fa-fw"></i> Select Targets</a> </li>
+                    <li><a href="#mapping" data-toggle="tab" data-bind='click: forceResize'><i class="fa fa-cloud-upload fa-fw"></i> Provisioning Details</a> </li>
+                    <li><a href="#status" data-toggle="tab" data-bind='click: forceResize'><i class="fa fa-cloud-upload fa-fw"></i> Provisioning Status</a> </li>
+                    <li><a href="#documents" data-toggle="tab" data-bind='click: forceResize'><i class="fa fa-cloud-upload fa-fw"></i> Documents</a> </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="targets">
+                        <h4>Select Targets</h4>
+                        <h6>Add the control hosts(physical servers) here</h6>
+                        <div class="panel panel-default">                                   
+                            <div class="panel-heading"> <i class="fa fa-cloud-download fa-fw"></i>Target Host
+                            </div>
+                            <!-- /.panel-heading-->
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <div class="form-group">
+                                        <div style="width: 100%;" data-bind="koGrid: targetListGridOptions"></div>
+                                    </div>
+                                    <!-- /.form-group-->
+                                </div>
+                                <!-- /.table-responsive-->
+                                <button type="button" class="btn btn-primary"> Add System </button>
+                                <button type="button" class="btn btn-primary"> Remove System </button>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+
+                    </div>
+                    <!-- /.row --> 
+                    <!-- /.tab-pane fade in active targets-->
+
+                    <div class="tab-pane fade" id="mapping">
+                        <h4>New Hosts</h4>
+                        <h6>List of hosts to be provisioned with requested resources</h6>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Host Details
+
+                            </div>
+                            <div class="panel-body">
+                                <div style="width: 100%;" data-bind="koGrid: targetDetailsGridOptions"></div>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <button type="submit" class="btn btn-primary" >Add System</button>
+                        <button type="submit" class="btn btn-primary" >Remove System</button>
+                    </div>
+                    <div class="tab-pane fade" id="status">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <!--<i class="fa fa-check-circle fa-2x "></<i>-->
+                                <div style="width: 100%;" data-bind="koGrid: targetStatusGridOptions"></div>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <div class="row" >
+                            <div class="col-sm-2">
+                                <label> Selected Host: </label>
+                            </div>
+                            <div class="col-sm-10">
+                                <output data-bind="value:selectedHostName"></output>
+                            </div>  
+                        </div>
+                        <div class="row" data-bind="visible: selectedHostName()!==null">
+                            <div class="col-lg-12">
+                                <div class="col-md-1" data-bind='ojComponent: {"component":"ojChart","type":"line","groups":["11:15","9:20","10:25","10:70","12:95","10:40","13:45","11:50","8:55","11:00","9:05","10:10","11:15","11:20","11:25","11:30","11:35","11:40","12:45","11:50","10:55","12:00","12:05","12:10"],"series":[{"name":"CPU Utilization","items":[1,0,10,12,4,18,0,50,12,4,5,12,15,27,45,70,98,39,99,50,4,2,3,1]}],"title":{"text":"cpu","hAlign":"center"}}'>
+                                </div>
+                                <div class="col-md-1" data-bind='ojComponent: {"component":"ojChart","type":"pie","groups":["10:15","10:20","10:25","10:30","10:35","10:40","10:45","10:50","10:55","11:00","11:05","11:10","11:15","11:20","11:25","11:30","11:35","11:40","11:45","11:50","11:55","12:00","12:05","12:10"],"series":[{"name":"In Use","items":[1,33,90,2,41,17,99,10,20,67,50,39,59,27,88,70,98,69,99,50,4,2,3,1]},{"name":"Free","items":[55,57,12,60,52,34,52,54,59,63,67,12,69,70,78,34,93,95,99,68,59,27,52,52]}],"title":{"text":"memory","hAlign":"center"}}'>
+                                </div>
+                                <div class="col-md-1" data-bind='ojComponent: {"component":"ojChart","type":"bar","groups":["10:55","11:20","11:25","9:30","10:35","11:40","12:45","10:50","10:55","11:00","10:05","11:10","11:15","11:20","11:25","11:30","11:35","11:40","11:45","11:50","11:55","12:00","12:05","12:10"],"series":[{"name":"Status","items":[1,0,0,2,4,1,0,0,12,4,5,12,15,27,45,70,98,99,99,50,4,2,3,1]}],"title":{"text":"status","hAlign":"center"}}'>
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+
+                        <div class="row" >
+                            <div class="col-sm-2">
+                                <label> Selected Control Host: </label>
+                            </div>
+                            <div class="col-sm-10">
+                                <output data-bind="value:selectedControlHostName"></output>
+                            </div>  
+                        </div>
+                        <div class="row" data-bind="visible: selectedControlHostName()!==null">
+                            <div class="col-md-12">
+                                <div class="col-md-2" data-bind='ojComponent: {"component":"ojChart","type":"line","groups":["10:15","10:20","10:25","10:30","12:35","10:40","10:45","11:50","10:55","11:00","9:05","11:10","11:15","11:20","11:25","11:30","11:35","11:40","11:45","11:50","11:55","12:00","12:05","12:10"],"series":[{"name":"CPU Utilization","items":[1,10,10,27,4,11,50,0,2,4,5,12,15,27,45,70,58,79,99,50,4,2,3,1]}],"title":{"text":"cpu","hAlign":"center"}}'>
+                                </div>
+                                <div class="col-md-2" data-bind='ojComponent: {"component":"ojChart","type":"pie","groups":["10:15","10:20","10:25","10:30","10:35","10:40","10:45","10:50","10:55","11:00","11:05","11:10","11:15","11:20","11:25","11:30","11:35","11:40","11:45","11:50","11:55","12:00","12:05","12:10"],"series":[{"name":"In Use","items":[1,0,0,2,4,1,0,0,2,4,5,12,15,27,45,70,98,39,99,50,4,2,3,1]},{"name":"Free","items":[55,57,53,60,52,52,52,54,59,63,67,68,69,70,78,82,93,95,99,68,59,52,52,52]}],"title":{"text":"memory","hAlign":"center"}}'>
+                                </div>
+                                <div class="col-md-2" data-bind='ojComponent: {"component":"ojChart","type":"bar","groups":["10:15","10:20","10:25","10:30","10:35","10:40","10:45","10:50","10:55","11:00","11:05","11:10","11:15","11:20","11:25","11:30","11:35","11:40","11:45","11:50","11:55","12:00","12:05","12:10"],"series":[{"name":"Status","items":[1,0,0,2,4,11,0,0,2,41,51,12,15,27,45,70,98,59,99,50,4,2,3,1]}],"title":{"text":"status","hAlign":"center"}}'>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="documents">
+
+                    </div>
+                </div>  <!-- End of TAB Panes -->
+            </div>  
+        </div>
+    </div>  
+</div>     
+
+

@@ -1,0 +1,94 @@
+[{
+  "hostname":"ssc-01",
+  "server_type":"Sparc T5-4",
+  "os":"Solaris",
+  "os_version":"11.1",
+  "primary_ip":"192.168.5.76",
+  "total_cpu":"256",
+  "allocated_cpu":"12",
+  "total_memory":"256",
+  "allocated_memory":"8",
+  "total_disk":6000,
+  "allocated_disk":120
+  
+},
+{
+   "hostname":"ssc-02",
+  "server_type":"Sparc T5-4",
+  "os":"Solaris",
+  "os_version":"11.1",
+  "primary_ip":"192.168.5.76",
+  "total_cpu":"256",
+  "allocated_cpu":"12",
+  "total_memory":"256",
+  "allocated_memory":"8",
+  "total_disk":6000,
+  "allocated_disk":120
+  
+},
+{
+   "hostname":"ssc-03",
+  "server_type":"Sparc T5-4",
+  "os":"Solaris",
+  "os_version":"11.1",
+  "primary_ip":"192.168.5.76",
+  "total_cpu":"256",
+  "allocated_cpu":"12",
+  "total_memory":"256",
+  "allocated_memory":"8",
+  "total_disk":6000,
+  "allocated_disk":120
+  
+},
+{
+   "hostname":"ssc-04",
+  "server_type":"Sparc T5-4",
+  "os":"Solaris",
+  "os_version":"11.1",
+  "primary_ip":"192.168.5.76",
+  "total_cpu":"256",
+  "allocated_cpu":"12",
+  "total_memory":"256",
+  "allocated_memory":"8",
+  "total_disk":6000,
+  "allocated_disk":120
+},
+{
+   "hostname":"ssc-05",
+  "server_type":"Sparc T5-4",
+  "os":"Solaris",
+  "os_version":"11.1",
+  "primary_ip":"192.168.5.76",
+  "total_cpu":"256",
+  "allocated_cpu":"12",
+  "total_memory":"256",
+  "allocated_memory":"8",
+  "total_disk":6000,
+  "allocated_disk":120
+},
+{
+   "hostname":"ssc-06",
+  "server_type":"Sparc T5-4",
+  "os":"Solaris",
+  "os_version":"11.1",
+  "primary_ip":"192.168.5.76",
+  "total_cpu":"256",
+  "allocated_cpu":"12",
+  "total_memory":"256",
+  "allocated_memory":"8",
+  "total_disk":6000,
+  "allocated_disk":120
+},
+{
+   "hostname":"ssc-07",
+  "server_type":"Sparc T5-4",
+  "os":"Solaris",
+  "os_version":"11.1",
+  "primary_ip":"192.168.5.76",
+  "total_cpu":"256",
+  "allocated_cpu":"12",
+  "total_memory":"256",
+  "allocated_memory":"8",
+  "total_disk":6000,
+  "allocated_disk":120
+}]

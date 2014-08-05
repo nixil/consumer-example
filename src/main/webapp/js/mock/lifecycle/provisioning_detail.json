@@ -1,0 +1,82 @@
+[{
+        "control_host": "ssc-01",
+        "virtual_host": "apollo T5-4",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120
+
+    },
+    {
+        "control_host": "ssc-02",
+        "virtual_host": "mars",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120
+
+    },
+    {
+        "control_host": "ssc-01",
+        "virtual_host": "jupitor",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120
+
+    },
+    {
+        "control_host": "ssc-02",
+        "virtual_host": "saturn",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120
+    },
+    {
+        "control_host": "ssc-03",
+        "virtual_host": "earth",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120
+    },
+    {
+        "control_host": "ssc-03",
+        "virtual_host": "mercury",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120
+    }
+   ]

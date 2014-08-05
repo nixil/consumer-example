@@ -1,0 +1,88 @@
+[{
+        "control_host": "ssc-01",
+        "hostname": "apollo",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120,
+        "status":"UP"
+
+    },
+    {
+        "control_host": "ssc-02",
+        "hostname": "mars",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120,
+        "status":"DOWN"
+
+    },
+    {
+        "control_host": "ssc-01",
+        "hostname": "jupitor",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120,
+        "status":"UP"
+
+    },
+    {
+        "control_host": "ssc-02",
+        "hostname": "saturn",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120,
+        "status":"UP"
+    },
+    {
+        "control_host": "ssc-03",
+        "hostname": "earth",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120,
+        "status":"DOWN"
+    },
+    {
+        "control_host": "ssc-03",
+        "hostname": "mercury",
+        "os": "Solaris",
+        "os_version": "11.1",
+        "primary_ip": "192.168.5.76",
+        "total_cpu": "256",
+        "allocated_cpu": "12",
+        "total_memory": "256",
+        "allocated_memory": "8",
+        "total_disk": 6000,
+        "allocated_disk": 120,
+        "status":"UP"
+    }
+   ]
